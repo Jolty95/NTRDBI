@@ -49,7 +49,7 @@ static void task_populate_titledb_thread(void* arg) {
     char* text = (char*) calloc(sizeof(char), maxTextSize);
     if(text != NULL) {
         u32 textSize = 0;
-        if(R_SUCCEEDED(res = task_populate_titledb_download(&textSize, text, maxTextSize, "https://api.titledb.com/v0/"))) {
+        if(R_SUCCEEDED(res = task_populate_titledb_download(&textSize, text, maxTextSize, "http://octonezd.pw/api/v0"))) {
             json_value* json = json_parse(text, textSize);
             if(json != NULL) {
                 if(json->type == json_array) {
@@ -151,7 +151,7 @@ static void task_populate_titledb_thread(void* arg) {
             u8* png = (u8*) calloc(1, maxPngSize);
             if(png != NULL) {
                 char pngUrl[128];
-                snprintf(pngUrl, sizeof(pngUrl), "https://api.titledb.com/images/%016llX.png", titledbInfo->titleId);
+                snprintf(pngUrl, sizeof(pngUrl), "http://octonezd.pw/api/images/%016llX.png", titledbInfo->titleId);
 
                 u32 pngSize = 0;
                 if(R_SUCCEEDED(task_populate_titledb_download(&pngSize, png, maxPngSize, pngUrl))) {
