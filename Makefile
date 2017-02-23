@@ -38,7 +38,7 @@ VERSION_MICRO := $(word 3, $(VERSION_PARTS))
 
 ifeq ($(TARGET),$(filter $(TARGET),3DS WIIU))
     TITLE := $(NAME)
-    DESCRIPTION := Open source NTRDB Downloader.
+    DESCRIPTION := NTRDB Downloader.
     AUTHOR := adrifcastr
 endif
 
@@ -65,7 +65,7 @@ ifeq ($(TARGET),3DS)
     ROMFS_DIR := romfs
     BANNER_AUDIO := meta/audio_3ds.wav
     BANNER_IMAGE := meta/banner_3ds.cgfx
-    ICON := meta/icon.png
+    ICON := meta/icon_3ds.png
     LOGO := meta/logo_3ds.bcma.lz
 endif
 
