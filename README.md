@@ -2,6 +2,7 @@
 NTRDB Downloader
 
 ## :construction: **WORK IN PROGRESS!!** :construction:
+(still don´t expect it to download something)
 
 Credits: @Steveice10 for FBI since this is a Mod of it /
          everyone else involved with FBI
