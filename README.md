@@ -6,5 +6,7 @@ NTRDB Downloader
 
 Credits: @Steveice10 for FBI since this is a Mod of it /
          everyone else involved with FBI
+         
          @Jolty95 for helping on this project and beeing awesome
+         
          @Octonezd for NTRDB and beeing awesome
