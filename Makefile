@@ -28,13 +28,17 @@ BUILD_FLAGS_CC :=
 BUILD_FLAGS_CXX :=
 RUN_FLAGS :=
 
-VERSION_PARTS := $(subst ., ,$(shell git describe --tags --abbrev=0))
+# VERSION_PARTS := $(subst ., ,$(shell git describe --tags --abbrev=0))
 
-VERSION_MAJOR := $(word 1, $(VERSION_PARTS))
-VERSION_MINOR := $(word 2, $(VERSION_PARTS))
-VERSION_MICRO := $(word 3, $(VERSION_PARTS))
+#VERSION_MAJOR := $(word 1, $(VERSION_PARTS))
+#VERSION_MINOR := $(word 2, $(VERSION_PARTS))
+#VERSION_MICRO := $(word 3, $(VERSION_PARTS))
 
-# 3DS/Wii U CONFIGURATION #
+VERSION_MAJOR := 0
+VERSION_MINOR := 0
+VERSION_MICRO := 1
+
+# 3DS CONFIGURATION #
 
 ifeq ($(TARGET),$(filter $(TARGET),3DS WIIU))
     TITLE := $(NAME)
@@ -67,16 +71,6 @@ ifeq ($(TARGET),3DS)
     BANNER_IMAGE := meta/banner_3ds.cgfx
     ICON := meta/icon_3ds.png
     LOGO := meta/logo_3ds.bcma.lz
-endif
-
-# Wii U CONFIGURATION #
-
-ifeq ($(TARGET),WIIU)
-    LIBRARY_DIRS +=
-    LIBRARIES +=
-
-    LONG_DESCRIPTION := Open source CIA installer.
-    ICON := meta/icon_wiiu.png
 endif
 
 # INTERNAL #
