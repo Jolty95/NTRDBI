@@ -13,6 +13,7 @@
 #include "../../../core/util.h"
 #include "../../../json/json.h"
 #include "../../../stb_image/stb_image.h"
+#include "ntrdb.h"
 
 static Result task_populate_titledb_download(u32* downloadSize, void* buffer, u32 maxSize, const char* url) {
     Result res = 0;
@@ -49,7 +50,7 @@ static void task_populate_titledb_thread(void* arg) {
     char* text = (char*) calloc(sizeof(char), maxTextSize);
     if(text != NULL) {
         u32 textSize = 0;
-        if(R_SUCCEEDED(res = task_populate_titledb_download(&textSize, text, maxTextSize, "http://ntrdb.octonezd.pw/api/v0"))) {
+        if(R_SUCCEEDED(res = task_populate_titledb_download(&textSize, text, maxTextSize, NTR_API_URL))) {
             json_value* json = json_parse(text, textSize);
             if(json != NULL) {
                 if(json->type == json_array) {
