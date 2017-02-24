@@ -1,0 +1,36 @@
+language: cpp
+
+before_install:
+  - wget http://sourceforge.net/projects/devkitpro/files/Automated%20Installer/devkitARMupdate.pl
+  - export DEVKITPRO=/home/travis/devkitPro
+  - export DEVKITARM=${DEVKITPRO}/devkitARM
+
+install:
+  - sudo perl devkitARMupdate.pl   
+  - wget --no-check-certificate https://codeload.github.com/fincs/citro3d/zip/master -O /tmp/citro3d.zip
+  - unzip /tmp/citro3d.zip
+  - cd citro3d-master
+  - make && sudo make install
+  - cd ..
+  - wget --no-check-certificate  https://raw.githubusercontent.com/libretro/RetroArch/master/ctr/tools/bannertool-linux
+  - chmod 777 bannertool-linux
+  - sudo cp bannertool-linux /usr/bin/bannertool
+  - wget --no-check-certificate  https://raw.githubusercontent.com/libretro/RetroArch/master/ctr/tools/makerom-linux
+  - chmod 777 makerom-linux
+  - sudo cp makerom-linux /usr/bin/makerom
+  - cd ..  
+script:
+  - echo "Starting compilation"
+  - cd NTRDBI
+  - echo "Compiling NTRDBI"
+  - make
+  - echo "Compilation ended"
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.9
+    - g++-4.9
+    - libstdc++6
+    - lftp
