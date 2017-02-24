@@ -2,13 +2,12 @@
 NTRDB Downloader
 
 ## :construction: **WORK IN PROGRESS!!** :construction:
-(still don´t expect it to download something)
+(still don't expect it to download something...yet!)
 
-Credits:
+## **Credits:**
 
-@Steveice10 for FBI since this is a Mod of it /
-         everyone else involved with FBI
+- [@Steveice10](https://github.com/Steveice10) for FBI since this is a Mod of it _(and everyone else involved with FBI)_ 
          
-@Jolty95 for helping on this project and beeing awesome
+- [@Jolty95](https://github.com/Jolty95) for helping on this project and beeing awesome
 
-@Octonezd for NTRDB and beeing awesome
+- [@Octonezd](https://github.com/Octonezd) for NTRDB and beeing awesome
