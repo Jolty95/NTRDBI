@@ -1,1 +1,14 @@
-[{"id": 1, "timestamp": 1487517949.052672, "compatible": "universal", "TitleID": "1234567890123456", "added": "2999-10-30 23:59", "developer": "Demo developer", "version": "999", "name": "This is a demo name", "desc": "This demo includes:\r\n\r\n1. Text 1\r\n2. Text 2\r\n3. Text 3\r\n4., "pic": "http://rydog199.github.io/images/animal.png", "plg": "void?", "devsite": "https://www.google.es"}]
+[{
+	"id": 1,
+	"timestamp": 1487517949.052672,
+	"compatible": "universal",
+	"TitleID": "1234567890123456",
+	"added": "2999-10-30 23:59",
+	"developer": "Demo developer",
+	"version": "999",
+	"name": "This is a demo name",
+	"desc": "This demo includes:\r\n\r\n1. Text 1\r\n2. Text 2\r\n3. Text 3\r\n4., ",
+	"pic ": "http: //rydog199.github.io/images/animal.png",
+	"plg": "void?",
+	"devsite": "https://www.google.es"
+}]
