@@ -2,7 +2,7 @@
 	"id": 1,
 	"timestamp": 1487517949.052672,
 	"compatible": "universal",
-	"TitleID": "0004000000198E00",
+	"TitleID":  "0004000000086300;0004000000086400;0004000000086200",
 	"added": "2017-02-19 18:25",
 	"developer": "RyDog199",
 	"version": "321",
